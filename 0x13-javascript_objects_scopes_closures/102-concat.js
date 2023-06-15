@@ -1,16 +1,5 @@
 #!/usr/bin/node
-const { dict } = require('./101-data');
-
-const newDict = {};
-
-for (const userId in dict) {
-  const occurrence = dict[userId];
-  
-  if (newDict[occurrence] === undefined) {
-    newDict[occurrence] = [];
-  }
-  
-  newDict[occurrence].push(userId);
-}
-
-console.log(newDict);
+const fs = require('fs');
+const a = fs.readFileSync(process.argv[2], 'utf8');
+const b = fs.readFileSync(process.argv[3], 'utf8');
+fs.writeFileSync(process.argv[4], a + b);

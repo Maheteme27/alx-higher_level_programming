@@ -1,10 +1,5 @@
 #!/usr/bin/node
-exports.esrever = function(list) {
-  let reversedList = [];
-  
-  for (let i = list.length - 1; i >= 0; i--) {
-    reversedList.push(list[i]);
-  }
-  
-  return reversedList;
+let count = 0;
+exports.logMe = function (item) {
+  console.log(`${count++}: ${item}`);
 };
